@@ -5,7 +5,12 @@ services:
     ports:
      - "8080:80"
     volumes:
-    - ./nginx:/etc/nginx
-    - ./content:/sites/demo
-
+      - ./nginx:/etc/nginx
+      - ./content:/sites/demo
+    links:
+      - php
+  php:
+    image: 'bitnami/php-fpm:latest'
+    volumes:
+      - ./content:/sites/demo
   

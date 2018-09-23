@@ -1,5 +1,6 @@
 FROM ubuntu:latest
 RUN apt-get update -y && \
+DEBIAN_FRONTEND=noninteractive && \
 apt-get install wget -y && \
 apt-get install build-essential -y && \
 apt-get install libpcre3 libpcre3-dev zlib1g zlib1g-dev libssl-dev  -y
