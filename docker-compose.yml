@@ -8,7 +8,7 @@ services:
       - ./nginx:/etc/nginx
       - ./content:/sites/demo
     links:
-      - php
+      - php #this is a  cool deal it makes a little one way network to host name "php" for service php
   php:
     image: 'bitnami/php-fpm:latest'
     volumes:
